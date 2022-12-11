@@ -1,4 +1,7 @@
-# holoshuffle
+# HoloShuffle
+
+a webapp for finding hololive songs, sung by other members.
+他のホロメンが歌ってくれたホロライブソングを探すためのウェブアプです
 
 ## Project setup
 ```
