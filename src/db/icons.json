@@ -1,0 +1,72 @@
+[
+    {
+        "Sora": "sora_jp.jpg",
+        "Azki": "azki.jpg",
+        "Suisei": "suisei_jp.jpg",
+        "Miko": "miko_jp.jpg",
+        "Roboco": "roboco_jp.jpg"
+    },
+    {
+        "Subaru": "subaru_jp.jpg",
+        "Choco": "choco_jp.jpg",
+        "Aqua": "aqua_jp.jpg",
+        "Shion": "shion_jp.jpg",
+        "Ayame": "nakiri_jp.jpg"
+    },
+    {
+        "Haachama": "haachama_jp.jpg",
+        "Matsuri": "matsuri_jp.jpg",
+        "Mel": "mel_jp.jpg",
+        "Aki": "aki_jp.jpg",
+        "Korone": "korone_jp.jpg"
+    },
+    {
+        "Marine": "marine_jp.jpg",
+        "Pekora": "pekora_jp.jpg",
+        "Noel": "noel_jp.jpg",
+        "Flare": "flare_jp.jpg",
+        "Okayu": "okayu_jp.jpg"
+    },
+    {
+        "Luna": "luna_jp.jpg",
+        "Towa": "towa_jp.jpg",
+        "Kanata": "kanata_jp.jpg",
+        "Watame": "watame_jp.jpg",
+        "Fubuki": "fubuki_jp.jpg"
+    },
+    {
+        "Nene": "nene_jp.jpg",
+        "Botan": "botan_jp.jpg",
+        "Lamy": "lamy_jp.jpg",
+        "Polka": "polka_jp.jpg",
+        "Mio": "mio_jp.jpg"
+    },
+    {
+        "Lui": "rui.png",
+        "Laplus": "lapurasu.png",
+        "Koyori": "koyori.png",
+        "Chloe": "chloe.png",
+        "Iroha": "iroha.png"
+    },
+    {
+        "Fauna": "ceres.png",
+        "Kronii": "kronii.png",
+        "Mumei": "mumei.png",
+        "Baelz": "hakos.png",
+        "Reine": "pavolia_reine_id.jpg",
+        "Iofi": "airani_iofifteen_id.jpg",
+        "Gura": "gawr_gura_en.jpg",
+        "Ollie": "kureiji_ollie_id.jpg",
+        "Moona": "moona_hoshinova_id.jpg",
+        "Calli": "mori_calliope_en.jpg",
+        "Amelia": "watson_amelia_en.jpg",
+        "Kiara": "takanashi_kiara_en.jpg",
+        "Anya": "anya_melfissa_id.jpg",
+        "Ina": "ninomae_inanis_en.jpg",
+        "Risu": "ayunda_risu_id.jpg",
+        "Irys": "irys.webp",
+        "Zeta": "zeta.png",
+        "Kaela": "kaela.png",
+        "Kobo": "kobo.png"
+    }
+]
