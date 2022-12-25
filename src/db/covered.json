@@ -46,15 +46,69 @@
             "url": "https://www.youtube.com/watch?v=Npo_VnOjfMY",
             "title": "I'm Your Treasure Box",
             "by": "Marine"
+        },
+        {
+	        "url": "https://www.youtube.com/watch?v=Npo_VnOjfMY",
+            "title": "飛んでK!ホロライブサマー",
+            "by": "Hololive",
+            "with": ["Kanata"]
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Npo_VnOjfMY",
+            "title": "Stellar Stellar",
+            "by": "Suisei",
+            "with": ["Kanata"]
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Npo_VnOjfMY",
+            "title": "GHOST",
+            "by": "Suisei",
+            "with": ["Suisei"]
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Npo_VnOjfMY",
+            "title": "Shiny Smile Story",
+            "by": "Hololive",
+            "with": ["Suisei"]
         }
     ],
     "Aqua": [
         
     ],
     "Towa": [
-
+        {
+            "url": "",
+            "title": "Ever Blue",
+            "by": "Polka"
+        }
     ],
     "Nene": [
 
+    ],
+    "Kanata": [
+        {
+            "url": "",
+            "title": "Peko Miko Sensou",
+            "by": ["Pekora", "Miko"]
+        }
+    ],
+    "Watame": [
+        {
+            "url": "https://www.youtube.com/watch?v=e8edampEhb8",
+            "title": "Aquairo Palette",
+            "by": "Aqua"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=e8edampEhb8",
+            "title": "Blue Clappers",
+            "by": ["Botan", "Polka", "Lamy", "Nene"]
+        }
+    ],
+    "Mio": [
+        {
+            "url": "https://www.youtube.com/watch?v=8vR8y5ck6Tg",
+            "title": "Kirameki Rider",
+            "by": "Hololive"
+        }
     ]
 }

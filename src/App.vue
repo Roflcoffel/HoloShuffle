@@ -4,9 +4,9 @@
 
   <div class="pure-g">
     <div class="pure-u-1-24"></div>
-    <div class="pure-u-10-24"><Grid heading="Singer" /></div>
+    <div class="pure-u-10-24"><Grid heading="Singer" side="left"/></div>
     <div class="pure-u-2-24"></div>
-    <div class="pure-u-10-24"><Grid heading="Original By"/></div>
+    <div class="pure-u-10-24"><Grid heading="Original By" side="right"/></div>
     <div class="pure-u-1-24"></div>
   </div>
 
