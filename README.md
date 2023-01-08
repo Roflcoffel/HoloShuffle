@@ -1,9 +1,9 @@
 # HoloShuffle
-a webapp for finding hololive songs, sung by other members.
+a webapp for finding hololive songs, sung by other members.  
 他のホロメンが歌ってくれたホロライブソングを探すためのウェブアプです
 
 ## Github Issues
-if you know of more songs, and want to help.
+if you know of more songs, and want to help.  
 I would really appreciate it if you could create an issue here on github.
 
 and also format it like this.
@@ -16,7 +16,7 @@ and also format it like this.
         },
     ]
 
-if the song is by a small group (2-5) use "by": "small_group"
+if the song is by a small group (2-5) use "by": "small_group"  
 if the song is by a big group (5+) use "by": "big_group"
 
 would also be helpful if the title of the issue included the youtube_id.
