@@ -49,6 +49,10 @@
         "Iroha": "iroha.png"
     },
     {
+        "small_group": "small_group_album.png",
+        "big_group": "big_group_album.png"
+    },
+    {
         "Fauna": "ceres.png",
         "Kronii": "kronii.png",
         "Mumei": "mumei.png",
