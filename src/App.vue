@@ -14,22 +14,17 @@
     <div class="pure-u-2-24"></div>
   </div>
 
-  <div class="pure-g">
-    <div class="pure-u-1-3"></div>
-    <div class="pure-u-1-3">
-      <p>The project can be found here <a href="https://github.com/Roflcoffel/HoloShuffle">HoloShuffle@GitHub</a></p>
-    </div>
-    <div class="pure-u-1-3"></div>
-  </div>
+  <Footer />
 </template>
 
 <script>
 import Grid from './components/Grid.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Grid
+    Grid, Footer
   }
 }
 </script>
