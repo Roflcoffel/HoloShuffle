@@ -177,7 +177,7 @@
         {
             "youtube_id": "",
             "title": "Peko Miko Sensou",
-            "by": ["Pekora", "Miko"]
+            "by": "small_group"
         },
         {
             "youtube_id": "ao7RyLxwAb8",
@@ -206,7 +206,7 @@
         {
             "youtube_id": "e8edampEhb8",
             "title": "Blue Clappers",
-            "by": ["Botan", "Polka", "Lamy", "Nene"]
+            "by": "small_group"
         }
     ],
     "Mio": [

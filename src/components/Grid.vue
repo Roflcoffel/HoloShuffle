@@ -5,12 +5,14 @@
       <div v-if="side === 'left' && i === 8"></div>
       <div v-else>
         <img :id="addName(memberKey, side)" :class="addGreyscale(memberKey, side)" :src="`./assets/${file}`"
-          @mouseenter="addHighlight(memberKey, side)"
-          @mouseleave="addHighlight(memberKey, side)"
+          @mouseenter="addHighlight($event, memberKey, side)"
+          @mouseleave="addHighlight($event, memberKey, side)"
           @click="onSelection($event, memberKey, side)"
         />
-        <SongList v-if="side === 'right'" :id="addName(memberKey, side)"  class="hide" :songs="selCovered" />
       </div>
+    </div>
+    <div class="pure-u-1-1" v-for="(file, memberKey) in icons[i-1]" :key="memberKey">
+      <SongList v-if="side === 'right'" :id="addName(memberKey, side)"  class="hide" :songs="selCovered" />
     </div>
   </div>
 </template>
@@ -32,6 +34,7 @@ class LockedElement {
     //Clicked on the same member again, unlock it.
     if(this.member == member) {
       onUnlock()
+      console.log("Unlocking: " + this.member)
       this.member = ""
       this.isLocked = false
       return
@@ -44,8 +47,12 @@ class LockedElement {
     this.member = member
     this.isLocked = true
     onLock()
+    console.log("Locking: " + this.member + " " + this.isLocked)
   }
 }
+
+let leftLockedElement = new LockedElement()
+let rightLockedElement = new LockedElement()
 
 export default {
   name: 'Grid_Component',
@@ -56,8 +63,8 @@ export default {
     return {
       icons: icons_file,
       covered: covered_file,
-      leftLock: new LockedElement(),
-      rightLock: new LockedElement(),
+      leftLock: leftLockedElement,
+      rightLock: rightLockedElement,
       selCovered: []
     }
   },
@@ -73,39 +80,50 @@ export default {
     addName(member, side) {
       if(side == "right") return member
     },
-    addHighlight(member, side) {
-      if(this.leftLocked) return
+    addHighlight(event, member, side) {
       if(side == "left") {
+        //Turn of hover and greyscale when an element is locked.
+        if(this.leftLock.isLocked) return
+        event.target.classList.toggle("hover")
+
         for(let stream of this.covered[member]) {
-          let img = document.getElementById(stream.by)
+          let img = document.querySelector("img#" + stream.by)
           img.classList.toggle("greyscale")
         }
+      }
+      else {
+        if(this.rightLock.isLocked) return
+        event.target.classList.toggle("hover")
       }
     },
     //Handle when selecting singer, and originalby.
     onSelection(event, member, side) {
+      console.log("Side: " + side)
+      console.log("Left is locked: " + this.leftLock.isLocked)
       if(side == "right" && this.leftLock.isLocked) {
+        console.log("Right side and already left is locked")
         this.rightLock.lock(
           member,
           () => {
             event.target.classList.add("hover")
             this.selCovered = this.getCoveredSongs(member)
-            this.switchClass("SongList#" + member, "show", "hide")
+            this.toggleSongList("div#" + member)
           },
           () => {
-            event.target.classList.remove("hover")
-            this.switchClass("SongList#" + member, "hide", "show")
+            this.toggleSongList("div#" + member)
           }
         )
         return
       }
-      
-      this.leftLock.lock(
-        member,
-        () => event.target.classList.add("hover"),
-        () => event.target.classList.remove("hover")
-      )
 
+      if(side == "left") {
+        this.leftLock.lock(
+          member,
+          () => event.target.classList.add("hover"),
+          () => console.log("Empty Unlock Function")
+        )
+      }
+      
       //the two ways we should be able to get out of the locked state is
       //1. click on the same member again
       //2. clicking a highlighted member on the right and then also selected a song
@@ -121,11 +139,10 @@ export default {
       //or we have a little close button in the upper top right of the video.
     },
 
-    //removes one class and adds another.
-    switchClass(element_id, remove_class, add_class) {
-      const elem = document.getElementById(element_id)
-      elem.classList.add(add_class)
-      elem.classList.remove(remove_class)
+    toggleSongList(query) {
+      const elem = document.querySelector(query)
+      elem.classList.toggle("show")
+      elem.classList.toggle("hide")
     },
 
     //gets the covers that the currently locked member has sung from a specific member.
@@ -142,14 +159,10 @@ img {
   z-index: 1;
   transition: transform .2s;
   width: auto;
-  height: 130px;
+  height: 115px;
   box-shadow: 2px 2px 5px black;
   position: relative;
-}
-
-img:hover {
-  z-index: 2;
-  transform: scale(1.5);
+  margin-top: 5px;
 }
 
 .hover {

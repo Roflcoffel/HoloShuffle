@@ -1,7 +1,12 @@
 <template>
     <div class="pure-g">
         <div class="pure-u-1-1" v-for="(song, i) in songs" :key="i">
-            <h5><a :src="base_url + song.youtube_id">{{ song.title }} - {{ song.by }}</a></h5>
+            <hr/>
+            <ol>
+                <li>
+                <h5><a :href="base_url + song.youtube_id">{{ song.title }}</a> - {{ song.by }}</h5>
+                </li>
+            </ol>
             <hr/>
         </div>
     </div>
@@ -20,3 +25,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    hr {
+        margin-top: 50px;
+    }
+    a {
+        color: #49c8f0;
+    }
+</style>
