@@ -4,7 +4,7 @@
             <hr/>
             <ol>
                 <li>
-                <h5><a :href="base_url + song.youtube_id">{{ song.title }}</a> - {{ song.by }}</h5>
+                <h5><a :href="base_url + song.youtube_id">{{ song.title }}</a> - {{ getGroupName(song.by) }}</h5>
                 </li>
             </ol>
             <hr/>
@@ -22,12 +22,18 @@ export default {
     },
     props: {
         songs: Array,
+    },
+    methods: {
+        getGroupName(member) {
+            if(member == "small_group" || member == "big_group") return "Hololive"
+            return member
+        }
     }
 }
 </script>
 
 <style scoped>
-    hr {
+    h5 {
         margin-top: 50px;
     }
     a {

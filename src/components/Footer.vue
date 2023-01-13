@@ -1,11 +1,11 @@
 <template>
-    <br/>
-    <br/>
-    <div class="pure-g">
-        <div class="pure-u-1-3"></div>
-        <div class="pure-u-1-3"><h3>Offical Shuffle Melody!</h3></div>
-        <div class="pure-u-1-3"></div>
-    </div>
+  <br/>
+  <br/>
+  <div class="pure-g">
+      <div class="pure-u-1-3"></div>
+      <div class="pure-u-1-3"><h3>Offical Shuffle Melody!</h3></div>
+      <div class="pure-u-1-3"></div>
+  </div>
 
   <div class="pure-g">
     <div class="pure-u-1-5"></div>
@@ -25,8 +25,6 @@
     </div>
     <div class="pure-u-1-3"></div>
   </div>
-
-  
 </template>
 
 <script>

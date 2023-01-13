@@ -98,10 +98,7 @@ export default {
     },
     //Handle when selecting singer, and originalby.
     onSelection(event, member, side) {
-      console.log("Side: " + side)
-      console.log("Left is locked: " + this.leftLock.isLocked)
       if(side == "right" && this.leftLock.isLocked) {
-        console.log("Right side and already left is locked")
         this.rightLock.lock(
           member,
           () => {
@@ -123,20 +120,6 @@ export default {
           () => console.log("Empty Unlock Function")
         )
       }
-      
-      //the two ways we should be able to get out of the locked state is
-      //1. click on the same member again
-      //2. clicking a highlighted member on the right and then also selected a song
-
-      //little about how this looks visually,
-      //after selecting a member on the left, the rest of the member on the left side
-      //greyed out, and the clicked member is now always zoomed in maybe even add an extra highlight to it.
-      //you can then hover over on the right side, and when you click them a list under their portrait will appear
-      //this are all the songs that are made by the selected member and also covered by the first selected member.
-      //when then selecting a song in this list, a video will popout from under the portrait of the first selected member.
-      
-      //this should also unlock everything again, and the video disappears if we click on another member on the left side,
-      //or we have a little close button in the upper top right of the video.
     },
 
     toggleSongList(query) {
